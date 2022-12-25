@@ -1,0 +1,66 @@
+h1 {
+    color: blue;
+}
+
+hr {
+    border-width: 1px;
+    border-color: maroon;
+    border-style: dashed;
+}
+
+/* grouping */
+fieldset,
+legend {
+    border: red groove 15px;
+}
+
+legend {
+    padding: 10px;
+    background-color: white;
+    color: red;
+    font-weight: bold;
+    font-size: 14pt;
+    text-transform: uppercase;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 5px;
+}
+
+body {
+    background-color: khaki;
+    background-image: url('../images/ilham.jpg');
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-attachment: fixed;
+    margin: 0cm 3cm;
+    /* margin top-bottom=0cm, margin left-right=2cm */
+    /* background-image: linear-gradient(red, yellow, blue, yellow); */
+}
+
+p {
+    color: #CC6600;
+    text-align: justify;
+    font-family: calibri, verdana, comic sans, tahoma;
+    font-size: 12pt;
+}
+
+h3 {
+    text-align: center;
+}
+
+table {
+    border: 10px ridge maroon;
+    margin: auto;
+}
+
+td {
+    padding: 5px;
+    border: 1px solid green;
+}
+
+ol {
+    list-style-image: url("../images/musik.gif");
+}
+
+ul {
+    list-style-image: url("../images/nyanyi.gif");
+}

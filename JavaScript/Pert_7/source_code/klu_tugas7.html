@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Suara Hewan</title>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript">
+      $("document").ready(function () {
+        $("div.ayam").click(function () {
+          $(this).css({
+            background: "url('images/ayam.jpg')",
+          });
+        });
+        $("div.ayam").click(function () {
+          $("<audio></audio>")
+            .attr({
+              src: "audio/ayam.mp3",
+              volume: 0.4,
+              autoplay: "autoplay",
+            })
+            .appendTo("div");
+        });
+        //dst ........
+      });
+    </script>
+  </head>
+
+  <body>
+    <div>
+      <div class="ayam"></div>
+      <h3>Ayam</h3>
+    </div>
+    <div>
+      <div class="burung"></div>
+      <h3>Burung</h3>
+    </div>
+    <div>
+      <div class="kambing"></div>
+      <h3>Kambing</h3>
+    </div>
+    <div>
+      <div class="kucing"></div>
+      <h3>Kucing</h3>
+    </div>
+    <div>
+      <div class="sapi"></div>
+      <h3>Sapi</h3>
+    </div>
+  </body>
+</html>

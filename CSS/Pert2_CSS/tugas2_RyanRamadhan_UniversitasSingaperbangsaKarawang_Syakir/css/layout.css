@@ -1,0 +1,287 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+/* Style the header */
+.header {
+    /* background-color: #f1f1f1; */
+    background-image: url('https://static.vecteezy.com/system/resources/previews/002/292/582/original/elegant-black-and-gold-banner-background-free-vector.jpg');
+    padding: 20px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+    color: rgb(216, 187, 25);
+}
+
+.header p {
+    width: 100%;
+    text-align: center;
+    padding: 10px 330px;
+    color: rgb(255, 255, 255);
+}
+
+/* Style the top navigation bar */
+.topnav {
+    overflow: auto;
+    background-color: rgb(85, 79, 3);
+    padding: 0px 30px;
+}
+
+/* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* ================ ini adalah pseude class navbar  ============= */
+/* Change color on hover */
+.topnav a:hover {
+    background-color: rgb(99, 99, 98);
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    border: 1px solid rgb(99, 99, 98);
+    border-radius: 10px;
+}
+
+
+a.item:active {
+    background-color: rgb(0, 0, 0);
+    font-size: 16px;
+    color: #f7f7f7;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+a.item:link {
+    color: #000000;
+    text-decoration: none;
+    font-size: 16px;
+    text-align: center;
+    float: left;
+    display: block;
+    padding: 14px 16px;
+}
+
+a.item:visited {
+    font-size: 15px;
+    color: rgb(241, 241, 241);
+    text-decoration: underline;
+}
+
+
+/* ================ akhir pseude class dan id dan class ============= */
+
+/* ===== mengatur content ===== */
+.column {
+    float: left;
+    padding: 20px 20px;
+}
+
+/* Left and right column */
+.column.side {
+    width: 25%;
+}
+
+/* Middle column */
+.column.middle {
+    width: 50%;
+}
+
+.column.middle p {
+    text-align: justify;
+}
+
+.column.middle p img {
+    float: left;
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px 2px rgb(131, 112, 6);
+}
+
+.row {
+    padding: 0px 30px;
+    background-color: antiquewhite;
+}
+
+hr {
+    border-width: 3px;
+    border-color: rgb(0, 0, 0);
+    border-style: dotted;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+
+    /* membersihkan float left sebelumnya */
+    clear: both;
+}
+
+/* ini adalah Grouping */
+fieldset,
+legend {
+    border: rgb(85, 79, 3) double 5px;
+}
+
+#atas,
+#bawah {
+    text-align: right;
+}
+
+/* akhir Grouping */
+
+fieldset {
+    padding-bottom: 80px;
+}
+
+legend {
+    padding: 10px;
+    background-color: rgb(110, 107, 107);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+ol {
+    list-style-image: url("../images/musik.gif");
+}
+
+ul {
+    list-style-image: url("../images/nyanyi.gif");
+}
+
+ul.hobby {
+    list-style-image: url("../images/jempol.gif");
+}
+
+ul.favorite {
+    list-style-image: url("../images/jempol.gif");
+}
+
+
+/* ============= ini adalah pseude element =============*/
+p.p3::first-line {
+    color: rgb(94, 95, 5);
+    font-weight: bold;
+}
+
+p.p3::first-letter {
+    color: rgb(94, 95, 5);
+    font-size: 30pt;
+    font-weight: bold;
+    font-family: algerian, jokerman;
+    float: left;
+    padding-right: 10px;
+}
+
+p.p4::first-line {
+    color: rgb(45, 5, 95);
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* ================ ini adalah contoh style class dan id  ============= */
+/* style foto sekolah */
+#fotosekolah p {
+    text-align: center;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#fotosekolah img {
+    width: 250px;
+    padding: 5px 20px;
+    margin-left: 50px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 3px 3px rgb(131, 112, 6);
+}
+
+#fotosekolah img.foto {
+    width: 250px;
+    height: 150px;
+}
+
+/* style footer */
+.footer {
+    background-color: rgb(85, 79, 3);
+    color: white;
+    padding: 4px 30px;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* ===== kalender  ====== */
+.kalender {
+    width: 100%;
+    margin: 0;
+}
+
+th {
+    padding: 3px;
+    background-color: rgb(133, 124, 6);
+    color: white;
+    font-family: calibri;
+    font-size: 14px;
+}
+
+td {
+    text-align: center;
+    font-size: 14px;
+    padding: 3px 0;
+    background-color: #fbf7f7
+}
+
+#red {
+    color: red;
+}
+
+h2 {
+    text-align: center;
+    font-family: calibri;
+    padding-top: 50px;
+}
+
+.link {
+    text-decoration: none;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+}
+
+.link:link {
+    text-decoration: none;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+}
+
+.link:hover {
+    text-decoration: none;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    background-color: rgb(78, 80, 80);
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+
+    .column.side,
+    .column.middle {
+        width: 100%;
+    }
+}

@@ -1,0 +1,75 @@
+<form action="">
+    Tanggal Lahir:
+    <select name="tgl" id="">
+		<script>
+        for(tgl = 1; tgl <= 31; tgl++){
+            // cara backtif
+			document.write(`<option value="${tgl}">${tgl}</option>`);
+            // cara biasa
+            // document.write('<option value="'+tgl+'">'+tgl+'</option>');
+        }   
+        </script>
+	</select>
+
+    <select name="bln" id="">
+		<script>
+        for(bln = 1; bln <= 12; bln++){
+            // cara backtif
+			document.write(`<option value="${bln}">${bln}</option>`);
+            // cara biasa
+            // document.write('<option value="'+bln+'">'+bln+'</option>');
+        }   
+        </script>
+	</select>
+
+    <select name="thn" id="">
+		<script>
+            var thn_now = new Date().getFullYear(); //2022
+            var thn_max = thn_now - 35; //1987
+            var thn_min = thn_now - 17; //2005
+
+            while(thn_min >= thn_max){
+                document.write(`<option value="${thn_min}">${thn_min}</option>`);
+                thn_min--;
+            }
+
+        </script>
+	</select>
+
+    
+    <select name="thn" id="">
+		<script>
+            var thn_now = new Date().getFullYear(); //2022
+            var thn_max = thn_now - 35; //1987
+            var thn_min = thn_now - 17; //2005
+
+            while(thn_max <= thn_min){
+                document.write(`<option value="${thn_max}">${thn_max}</option>`);
+                thn_max++;
+            }
+
+        </script>
+	</select>
+
+    <!-- array -->
+    <select name="bln" id="">
+		<script>
+        let bulan = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agu', 'Sep', 'Okt', 'Nov', 'Des'];
+        
+        // array for in 
+        // for(let bln in bulan){
+        //     // cara backtif
+		// 	document.write(`<option value="${bln}">${bulan[bln]}</option>`);
+        // } 
+
+        // array for of
+        for(let bln of bulan){
+            // cara backtif
+			document.write(`<option value="${bln}">${bln}</option>`);
+        }   
+        
+        </script>
+	</select>
+    <p>Copyright</p>    
+
+</form>

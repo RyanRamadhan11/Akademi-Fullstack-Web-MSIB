@@ -1,0 +1,85 @@
+<!-- Ryan Ramadhan || Kelompok 5 || Fullstack Web Developer -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tugas 1 JavaScript || Ryan Ramadhan</title>
+    </head>
+
+    <body>
+
+        <script language="javascript">
+
+            //deklarasi dan inisialisasi variabel
+            let nama_pegawai = "Ridwan";
+            let jabatan = "Manager";
+            let status = "Menikah";
+
+            //struktur kendali if
+            if (jabatan == "Manager") {
+                gaji_pokok = 15000000;
+            } 
+            else if (jabatan == "Asisten Manager") {
+                gaji_pokok = 10000000;
+            } 
+            else if (jabatan == "Staff") {
+                gaji_pokok = 5000000;
+            }
+            else{
+                gaji_pokok = 0;
+            }
+
+            //rumus hitung tunjangan_Jabatan dan bpjs
+            let tunjangan_Jabatan = (gaji_pokok * 15) / 100;
+            let bpjs = (gaji_pokok * 10) / 100;
+
+            // ternary
+            let tunjangan_Keluarga = status == "Menikah" ? (gaji_pokok * 20) / 100 : 0;
+
+            //rumus hitung total gaji
+            let totalGaji = gaji_pokok + bpjs + tunjangan_Jabatan + tunjangan_Keluarga;
+            
+            //cetak data
+            document.write(`
+                <h4> DATA GAJI PEGAWAI </h4>
+                Nama Pegawai : ${nama_pegawai} <br>
+                Jabatan : ${jabatan} <br>
+                Status : ${status} <br>
+                <br>
+                <table border="1" cellpadding="10" cellspacing="0">
+                    <thead bgcolor="gray">
+                        <tr>
+                            <th>Data Gaji</th>
+                            <th>Nominal Gaji (Rupiah) </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Gaji Pokok</td>
+                            <td align="right">${gaji_pokok}</td>
+                        </tr>
+                        <tr>
+                            <td>BPJS</td>
+                            <td align="right">${bpjs}</td>
+                        </tr>
+                        <tr>
+                            <td>Tunjangan Jabatan</td>
+                            <td align="right">${tunjangan_Jabatan}</td>
+                        </tr>
+                        <tr>
+                            <td>Tunjangan Keluarga</td>
+                            <td align="right">${tunjangan_Keluarga}</td>
+                        </tr>
+                    </tbody>
+                    <tfoot bgcolor="Moccasin">
+                        <tr>
+                            <th align="left">Total Gaji</th>
+                            <th align="right">${totalGaji}</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            `);
+        </script>
+
+    </body>
+</html>

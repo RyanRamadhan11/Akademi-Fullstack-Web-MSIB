@@ -1,0 +1,46 @@
+<form>
+Tanggal lahir:<br/>
+<select name="tgl">
+    <script language="javascript">
+    for(tgl=1; tgl<=31;tgl++){    
+        document.write(`<option value="${tgl}">${tgl}</option>`);
+        //document.write('<option value="'+tgl+'">'+tgl+'</option>');
+    }
+    </script>
+</select> 
+<select name="bln">
+    <script language="javascript">
+    let bulan = ['Jan','Feb','Mar','Apr','Mei','Jun','Jul','Ags','Sep','Okt','Nov','Des']; 
+    /* 
+    for(let bln in bulan){ 
+        document.write(`<option value="${bulan[bln]}">${bulan[bln]}</option>`);
+    }
+    */
+    for(let bln of bulan){ 
+        document.write(`<option value="${bln}">${bln}</option>`);
+    }
+    </script>
+</select> 
+<select name="thn">
+    <script language="javascript">
+    var thn_now = new Date().getFullYear(); //2022
+    var thn_max = thn_now - 35; //1987
+    var thn_min = thn_now - 17; //2005
+    while(thn_min >= thn_max){
+        document.write(`<option value="${thn_min}">${thn_min}</option>`);
+        thn_min--;
+    }
+    </script>
+</select> 
+<select name="thn2">
+    <script language="javascript">
+    var thn_now = new Date().getFullYear(); //2022
+    var thn_max = thn_now - 35; //1987
+    var thn_min = thn_now - 17; //2005
+    while(thn_max <= thn_min){
+        document.write(`<option value="${thn_max}">${thn_max}</option>`);
+        thn_max++;
+    }
+    </script>
+</select> 
+</form>

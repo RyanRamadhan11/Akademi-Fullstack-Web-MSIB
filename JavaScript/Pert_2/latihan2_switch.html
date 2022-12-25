@@ -1,0 +1,65 @@
+<script language="javascript">
+    //belajar variabel dan tipe data
+    var pelanggan = "Siti Aminah";
+    var produk = "TV";
+    // TV => 3 jt, Kulkas => 4 jt, AC => 5 jt
+    //struktur kendali
+    
+    // if(produk == 'TV'){
+    //     harsat = 3000000; 
+    // } 
+    // else if(produk == 'Kulkas'){
+    //     harsat = 4000000; 
+    // } 
+    // else if(produk == 'AC'){
+    //     harsat = 5000000; 
+    // }
+    // else{
+    //     harsat = 0; 
+    // } 
+    
+    // cara switch
+    let harsat = 0;
+    switch (produk) {
+    case "AC": harsat = 5000000; break;
+    case "TV": harsat = 3000000; break;
+    case "Kulkas": harsat = 4000000; break;
+    default: harsat = 0; break;
+    }
+
+
+    let jmlBeli = 15;
+    let bruto = harsat * jmlBeli;
+    let diskon = 0;
+    
+    // if(produk == 'AC') diskon = 0.1 * bruto;
+    // else diskon = 0;
+    
+    //ternary
+    // let diskon = (produk == 'AC') ? 0.1 * bruto : 0;
+    
+    // if multidimensi & lebih dari 1 syarat
+    // cara 1 statement
+    // if(produk == 'AC' && jmlBeli >= 3) diskon = 0.3 * bruto;
+    // else if (produk == 'Kulkas' && jmlBeli >= 2) diskon = 0.2 * bruto;
+    // else diskon = 0.05 * bruto;
+    
+    // cara 2 statement
+    if(produk == 'AC' && jmlBeli >= 3) {
+        diskon = 0.3 * bruto;
+    }
+    else if (produk == 'Kulkas' && jmlBeli >= 2) {
+        diskon = 0.2 * bruto;
+    } 
+    else {
+        diskon = 0.05 * bruto;
+    }
+    
+    //cetak
+    document.write("Data Pembelian" +
+    "<br/>Pelanggan: " + pelanggan +
+    "<br/>Produk Pilihan: " + produk +
+    "<br/>Harga Satuan: " + harsat +
+    "<br/>Harga Kotor: " + bruto + 
+    "<br/>Diskon: " + diskon );
+    </script>

@@ -1,0 +1,116 @@
+<!-- Ryan Ramadhan || Kelompok 5 Syakir || Universitas Singaperbangsa Karawang || Fullstack Web Developer -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tugas 2 JavaScript || Ryan Ramadhan</title>
+		<style>
+			body {
+				background: rgb(38, 2, 80);
+				text-align: center;
+				font-family: Arial, Helvetica, sans-serif;
+			}
+
+			h2{
+				color: rgb(255, 255, 255);
+			}
+
+			table {
+				border: 2px solid rgb(0, 0, 0);
+				margin-bottom: 50px;
+			}
+
+			thead {
+				background:Purple;
+				color: white;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h2>===== DAFTAR GAJI PEGAWAI =====</h2>
+		<table border="1" align="center" cellpadding="13" cellspacing="0">
+			<thead>
+				<tr>
+					<th>No</th>
+					<th>Nama</th>
+					<th>Jabatan</th>
+					<th>Agama</th>
+					<th>Gaji Pokok</th>
+					<th>Tunjangan Jabatan</th>
+					<th>Tunjangan Kesehatan</th>
+					<th>Gaji Kotor</th>
+					<th>Zakat Profesi</th>
+					<th>Take Home Pay</th>
+				</tr>
+			</thead>
+			<tbody align="center">
+				<script>
+					//deklarasi dan inisialisasi variabel
+					let jabatan, gapok, tunjab, tunkes, gator, agama, warna, zakat_profesi, takeHomePay;
+					
+					//struktur kendali 
+					for (let i = 1; i <= 100; i++) {
+						if (i <= 25) {
+							jabatan = "Manager"
+						} else if (i <= 50) {
+							jabatan = "Asisten Manager"
+						} else if (i <= 75) {
+							jabatan = "Supervisor"
+						} else {
+							jabatan = "Staff"
+						}
+
+						//switch case
+						switch (jabatan) {
+							case "Manager":
+								gapok = 15000000;
+								break;
+							case "Asisten Manager":
+								gapok = 10000000;
+								break;
+							case "Supervisor":
+								gapok = 7000000;
+								break;
+							case "Staff":
+								gapok = 4000000;
+								break;
+							default:
+								gapok = 0;
+								break;
+						}
+
+						//rumus hitung tunjangan jabatan, tunjangan kesehatan, dan gaji kotor
+						tunjab = (gapok * 20) / 100;
+						tunkes = (gapok * 10) / 100;
+						gator = gapok + tunjab + tunkes;
+
+						//ternary
+						agama = (i % 2 == 1) ? "Muslim" : "Non Muslim";
+						warna = (agama == "Muslim") ? "yellow" : "aqua";
+						zakat_profesi = (agama == "Muslim" && gator >= 7000000) ? (gator * 2.5) / 100 : 0;
+						
+						//rumus hitung gaji take home pay
+						takeHomePay = gator - zakat_profesi;
+
+						//cetak data
+						document.write(`
+							<tr bgcolor="${warna}">
+								<td>${i}</td>
+								<td>Pegawai ${i}</td>
+								<td>${jabatan}</td>
+								<td>${agama}</td>
+								<td align="right">Rp ${gapok}</td>
+								<td align="right">Rp ${tunjab}</td>
+								<td align="right">Rp ${tunkes}</td>
+								<td align="right">Rp ${gator}</td>
+								<td align="right">Rp ${zakat_profesi}</td>
+								<td align="right">Rp ${takeHomePay}</td>
+							</tr>
+						`);
+					}
+				</script>
+			</tbody>
+		</table>
+	</body>
+</html>

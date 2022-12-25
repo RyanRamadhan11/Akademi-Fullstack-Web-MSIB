@@ -1,0 +1,159 @@
+<!-- Ryan Ramadhan || Kelompok 5 || Universitas Singaperbangsa Karawang || Fullstack Web Developer -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tugas 6 JavaScript || Ryan Ramadhan</title>
+
+    <!-- import bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+
+    <!-- css internal -->
+    <style>
+      .tab {
+        margin-top: 70px;
+        margin-bottom: 100px;
+        width: 80vw;
+      }
+
+      .judul {
+        text-align: center;
+      }
+
+      h3 {
+        color: white;
+        font-weight: bold;
+      }
+
+      a {
+        color: white;
+        text-align: center;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: aqua;
+        font-weight: bold;
+      }
+
+      .footer {
+        height: 80px;
+        text-align: center;
+        padding: 25px;
+      }
+    </style>
+  </head>
+
+  <body class="bg-dark">
+    <!-- Header -->
+    <div class="alert bg-secondary judul" role="alert">
+      <h3 align="center">Informasi Gempa di Indonesia</h3>
+      <a href="https://data.bmkg.go.id/DataMKG/TEWS/gempaterkini.xml"
+        >Silahkan Klik untuk kunjungi WEBSITE-BMKG</a
+      >
+    </div>
+
+    <!-- Table -->
+    <div>
+      <table align="center" class="table table-bordered tab">
+        <thead class="table-warning text-center">
+          <tr>
+            <th>No</th>
+            <th>Lokasi Gempa</th>
+            <th>Skala Gempa</th>
+            <th>Dampak Gempa</th>
+          </tr>
+        </thead>
+        <tbody class="table-light">
+          <script>
+            // ini class gempa
+            class Gempa {
+              //member variabel dan konstruktor
+              constructor(no, lokasiGempa, skalaGempa) {
+                this.no = no;
+                this.lokasiGempa = lokasiGempa;
+                this.skalaGempa = skalaGempa;
+              }
+
+              // member fungsi dampak() return valuenya dampak gempa
+              dampak() {
+                if (this.skalaGempa <= 2) {
+                  this.dampakGempa = "Tidak Terasa";
+                } else if (this.skalaGempa > 2 && this.skalaGempa <= 4) {
+                  this.dampakGempa = "Bangunan Retak-Retak";
+                } else if (this.skalaGempa > 4 && this.skalaGempa <= 6) {
+                  this.dampakGempa = "Bangunan Roboh";
+                } else if (this.skalaGempa > 6) {
+                  this.dampakGempa = "Bangunan Roboh dan Berpotensi Tsunami";
+                } else {
+                  this.dampakGempa = "";
+                }
+                return this.dampakGempa;
+              }
+
+              //fungsi infoGempa() memberikan informasi gempa berbentuk tabel
+              infoGempa() {
+                document.write(`<tr>
+                                        <td align="center">${this.no}</td>
+                                        <td>${this.lokasiGempa}</td>
+                                        <td align="right">${
+                                          this.skalaGempa
+                                        }</td>
+                                        <td align="center">${this.dampak()}</td>
+                                    </tr>
+                                    `);
+              }
+            }
+
+            //------------membuat object-----------------
+            //instance object dengan mengisi konstruktor class
+            terjadiGempa1 = new Gempa("1", "Timur Mentawai - Sumatera", 1.3);
+            terjadiGempa2 = new Gempa("2", "Utara Pacitan - Jawa Timur", 4.5);
+            terjadiGempa3 = new Gempa("3", "Selatan Mamberamo - Papua", 7);
+            terjadiGempa4 = new Gempa("4", "Timur Laut Seluma - Bengkulu", 3.3);
+            terjadiGempa5 = new Gempa("5", "Barat Gunung Kidul - Jogja", 8);
+            terjadiGempa6 = new Gempa("6", "Barat Bantul - DIY", 0.5);
+            terjadiGempa7 = new Gempa("7", "Tenggara Halmahera - Maluku", 5.1);
+            terjadiGempa8 = new Gempa("8", "Selatan - Sukabumi", 4.0);
+            terjadiGempa9 = new Gempa("9", "Selatan - Sukabumi", 15.3);
+            terjadiGempa10 = new Gempa("10", "Barat Daya - Aceh", 2.2);
+
+            // mencetak data
+            terjadiGempa1.infoGempa();
+            terjadiGempa2.infoGempa();
+            terjadiGempa3.infoGempa();
+            terjadiGempa4.infoGempa();
+            terjadiGempa5.infoGempa();
+            terjadiGempa6.infoGempa();
+            terjadiGempa7.infoGempa();
+            terjadiGempa8.infoGempa();
+            terjadiGempa9.infoGempa();
+            terjadiGempa10.infoGempa();
+          </script>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Footer -->
+    <div class="bg-secondary footer">
+      <h5 class="text-white" align="center">
+        Design By : Ryan Ramadhan || Kelompok 5
+      </h5>
+    </div>
+
+    <!-- import bootstrap js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

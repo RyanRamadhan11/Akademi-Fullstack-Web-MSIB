@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Inter, 'sans-serif';
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: DimGray;
+}
+
+.container {
+    max-width: 1280px;
+    width: 100%;
+    padding: 30px;
+    margin: 50px 20px;
+    border-radius: 8px;
+    background: DarkGray;
+}
+
+.card-title {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 1.75rem;
+}
+
+table {
+    border-collapse: collapse;
+    border-radius: 7px;
+    overflow: hidden;
+    font-size: 0.9em;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.radius-10 {
+    border-radius: 10px;
+}
+
+.box-shadow {
+    box-shadow: 0px;
+}
+
+.fw-600 {
+    font-weight: 300;
+}
+
+.font-size-1 {
+    font-size: 1.25rem;
+}
+
+.img-w300-h300 {
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+}
+
+.blur {
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+    transition: 0.1s filter linear;
+}
+
+.card {
+    background-color: blue;
+    display: block;
+    padding: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-shadow: 0 7px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 9px;
+    cursor: pointer;
+}
+
+.accordion-body {
+    width: 100%;
+    padding: 20px 0;
+    overflow: hidden;
+    display: none;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}

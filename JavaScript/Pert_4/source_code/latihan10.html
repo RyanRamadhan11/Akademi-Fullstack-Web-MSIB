@@ -1,0 +1,17 @@
+<marquee onmouseover="javascript:stop()" onmouseout="javascript:start()">
+<h3>Belajar DOM & Event Handler JS</h3>
+</marquee>
+<form id="frm">
+Nama :<input type="text" name="nama" />
+<input type="button" name="proses" value="Salam" onclick="javascript:salam()"/>
+</form>
+<p id="isi"></p>
+<script>
+function salam(){    
+    let siswa = document.getElementById('frm').nama.value;
+    let input = 'Selamat Pagi '+ siswa;
+    let no_input = 'Maaf Nama Anda Belum diisi';
+    let hasil = (siswa != '') ? input : no_input;
+    document.getElementById('isi').innerHTML = hasil;
+}
+</script>    

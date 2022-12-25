@@ -1,0 +1,52 @@
+<script language="javascript">
+    //belajar looping
+    document.write('=========== cetak angka 1 - 100 ===========');
+    var angka;
+    for(angka = 1; angka <= 50; angka++){
+        document.write(' <br/> No. ' + angka );
+    }
+    document.write('<hr/>');
+    document.write('<br/>=========== cetak angka 100 - 50 ===========');
+    var bil;
+    for(bil = 100; bil >= 50; bil--){
+        document.write(' <br/> No. ' + bil );
+    }
+
+    document.write('<hr/>');
+    document.write('<br/>=========== cetak angka ganjil 1 - 20 ===========');
+    var i;
+    for(i=1; i<=10; i++)
+        /*
+            Bagian untuk menentukan bilangan genap, dengan menggunakan sisa bagi 2 (modulus 2).
+            Apabila habis dibagi 2, maka bilangan tersebut adalah genap. dan apabila tidak, maka bilangan tersebut adalah ganjil.
+        */
+        {
+            if(i % 2 == 1){   
+                // document.write( `<br/> ${i} x 10 = ${i * 10}`)
+                // cara backtif
+                document.write( `<br/> 10 x ${i} = ${i * 10}`);
+                // cara biasa
+                document.write( '<br/> 5 x ' + i + '=' + i * 5);
+            }
+
+        }
+
+        document.write('<hr/>');
+    document.write('<br/>=========== cetak angka genap 1 - 20 ===========');
+    var i;
+    for(i=1; i<=10; i++)
+        /*
+            Bagian untuk menentukan bilangan genap, dengan menggunakan sisa bagi 2 (modulus 2).
+            Apabila habis dibagi 2, maka bilangan tersebut adalah genap. dan apabila tidak, maka bilangan tersebut adalah ganjil.
+        */
+        {
+            if(i % 2 == 0){   
+                // document.write( `<br/> ${i} x 10 = ${i * 10}`)
+                // cara backtif
+                // document.write( `<br/> 10 x ${i} = ${i * 10}`);
+                // cara biasa
+                document.write( '<br/> bilangan genap ' + i );
+            }
+
+        }
+</script>

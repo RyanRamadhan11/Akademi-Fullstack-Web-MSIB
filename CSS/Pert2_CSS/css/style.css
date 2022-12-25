@@ -1,0 +1,166 @@
+h1 {
+    color: blue;
+}
+
+hr {
+    border-width: 1px;
+    border-color: maroon;
+    border-style: dashed;
+}
+
+/* grouping */
+fieldset,
+legend {
+    border: red groove 15px;
+    border-radius: 30px;
+}
+
+legend {
+    padding: 10px;
+    background-color: white;
+    color: red;
+    font-weight: bold;
+    font-size: 14pt;
+    text-transform: uppercase;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 5px;
+}
+
+body {
+    background-color: khaki;
+    background-image: url('../images/ilham.jpg');
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-attachment: fixed;
+    margin: 0cm 3cm;
+    /* margin top-bottom=0cm, margin left-right=2cm */
+    /* background-image: linear-gradient(red, yellow, blue, yellow); */
+}
+
+p {
+    color: #CC6600;
+    text-align: justify;
+    font-family: calibri, verdana, comic sans, tahoma;
+    font-size: 12pt;
+}
+
+h3 {
+    text-align: center;
+}
+
+table {
+    border: 10px ridge maroon;
+    margin: auto;
+}
+
+td {
+    padding: 5px;
+    border: 1px solid green;
+}
+
+ol {
+    list-style-image: url("../images/musik.gif");
+}
+
+ul {
+    list-style-image: url("../images/nyanyi.gif");
+}
+
+ul.hobby {
+    list-style-image: url("../images/jempol.gif");
+}
+
+ul.menu {
+    list-style-image: url("../images/jempol.gif");
+}
+
+/* ================ pseude class dan id dan class ============= */
+
+/* a:active {
+    color: maroon;
+    text-decoration: none;
+    font-size: 16pt;
+    font-weight: bold;
+} */
+
+/* #menu {
+    text-align: center;
+    font-family: ubuntu, Calibri, tahoma, jokerman;
+    /* text-decoration: none;
+    color: maroon; */
+/* padding: 5px 0px;
+} */
+
+/* #menu a:link,
+a:visited,
+a:active {
+    color: blue;
+    text-decoration: none;
+    font-size: 16pt;
+    border: 1px solid #FFFACD;
+    padding: 5px;
+    background: #FFD700;
+} */
+
+/* #menu a:hover {
+    color: red;
+    text-decoration: none;
+    font-size: 14pt;
+    border: 1px solid green;
+    padding: 5px;
+    background: blueviolet;
+} */
+
+div#menu {
+    text-align: center;
+    font-family: ubuntu, calibri, tahoma, jokerman;
+    padding: 10px;
+}
+
+a.item:link,
+a.item:visited,
+a.item:active {
+    text-decoration: none;
+    font-size: 14pt;
+    color: #B8860B;
+    border: 2px solid #FFFACD;
+    padding: 5px;
+    background: #FFD700;
+}
+
+a.item:hover {
+    text-decoration: none;
+    font-size: 14pt;
+    color: red;
+    border: 2px solid greenyellow;
+    padding: 5px;
+    background: yellowgreen;
+}
+
+/* ============= pseude element =============*/
+
+p.p3::first-letter {
+    color: red;
+    font-size: 48pt;
+    font-weight: bold;
+    font-family: algerian, jokerman;
+    float: left;
+    padding-right: 10px;
+}
+
+p.p3::first-line {
+    color: green;
+    font-style: italic;
+}
+
+#atas,
+#bawah {
+    text-align: right;
+    padding-top: 20px;
+    color: lawngreen;
+}
+
+h1 {
+    text-shadow: 5px 5px yellowgreen;
+    color: greenyellow;
+}

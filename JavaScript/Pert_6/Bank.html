@@ -1,0 +1,51 @@
+<script>
+  // membuat kelas
+  class Bank {
+    //member1 var
+    //   let no = '';
+    //   let nama = '';
+    //   let saldo = 0;
+
+    // member2 konstuktor
+    constructor(norek, nasabah, saldo) {
+      this.no = norek;
+      this.nama = nasabah;
+      this.saldo = saldo;
+    }
+
+    // member3 fungsi
+    menabung(uang) {
+      // this.saldo = this.saldo + uang;
+      this.saldo += uang;
+    }
+    menarik(uang) {
+      // this.saldo = this.saldo - uang;
+      this.saldo -= uang;
+    }
+    mencetak() {
+      document.write(`Nama Nasabah : ${this.nama}
+                  <br/>No. Rekening : ${this.no}
+                  <br/>Saldo : ${this.saldo}
+                  <hr/>
+                  `);
+    }
+  }
+
+  //  membuat objek
+  // instance objek
+  neur = new Bank("001", "neur", 500000);
+  cr7 = new Bank("007", "Ronaldo", 700000);
+  leo = new Bank("010", "Messi", 1000000);
+  salah = new Bank("011", "Mohammad Salah", 900000);
+
+  // use attribute from class
+  cr7.menabung(200000);
+  salah.menabung(50000);
+  cr7.menarik(400000);
+  leo.menarik(100000);
+
+  neur.mencetak();
+  cr7.mencetak();
+  leo.mencetak();
+  salah.mencetak();
+</script>

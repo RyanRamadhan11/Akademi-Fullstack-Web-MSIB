@@ -1,0 +1,58 @@
+<!-- Tugas 3a || RyanRamadhan || Universitas Singaperbangsa Karawang || Kelompok 5 -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form Register Produk</title>
+    </head>
+    <body>
+        <form name="registerproduk">
+            <table border="0" align="center" cellpadding="10" cellspacing="5">
+                <thead>
+                    <th colspan="2" bgcolor="Gray" >Form Register Produk</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Nama Produk</td>
+                        <td>
+                            <input type=text name="namaProduk" size="30"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top">Jenis Produk</td>
+                        <td>
+                            <select name="KategoriProduk" >
+                                <option value="">-- Kategori Produk --</option>
+                                <option value="makanan">Makanan</option>
+                                <option value="minuman">Minuman</option>
+                                <option value="elektronik">Elektronik</option>
+                                <option value="kesehatan">Kesehatan</option>
+                                <option value="pakaian">Pakaian</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Harga</td>
+                        <td><input type=text name="harga" size="30"/></td>
+                    </tr>
+                    <tr>
+                        <td>Stok</td>
+                        <td><input type=text name="stok" size="30"/></td>
+                    </tr>
+                    <tr>
+                        <td>Photo</td>
+                        <td><input type=text name="photo" size="30"/></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr bgcolor="Gray">
+                        <th colspan="2">
+                            <input type="submit" name="proses" value="Kirim"/>&nbsp;
+                            <input type="reset" name="unproses" value="Batal"/>
+                        </th>
+                    </tr>
+                </tfoot>
+            </table>
+        </form>
+    </body>
+</html>

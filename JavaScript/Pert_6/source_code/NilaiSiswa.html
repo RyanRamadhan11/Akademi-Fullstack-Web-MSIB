@@ -1,0 +1,67 @@
+<script>
+class NilaiSiswa{
+    constructor(nama, matkul, nilai){
+        this.nama = nama;
+        this.matkul = matkul;
+        this.nilai = nilai;
+    }
+
+    getKelulusan(){
+        this.ket = this.nilai >= 60 ? 'Lulus':'Gagal';
+        return this.ket;
+    }
+
+    getGrade(){
+        if(this.nilai >= 85 && this.nilai <= 100) this.grade = 'A';
+        else if(this.nilai >= 75 && this.nilai < 85) this.grade = 'B';
+        else if(this.nilai >= 60 && this.nilai < 75) this.grade = 'C';
+        else if(this.nilai >= 30 && this.nilai < 60) this.grade = 'D';
+        else if(this.nilai >= 0 && this.nilai < 30) this.grade = 'E';
+        else this.grade = '';
+
+        return this.grade;
+    }
+
+    getPredikat(){
+        switch(this.grade){
+            case 'A': this.predikat = 'Memuaskan'; break;
+            case 'B': this.predikat = 'Bagus'; break;
+            case 'C': this.predikat = 'Cukup'; break;
+            case 'D': this.predikat = 'Kurang'; break;
+            case 'E': this.predikat = 'Buruk'; break;
+            default: this.predikat = '';
+        }
+
+        return this.predikat;
+    }
+
+    cetak(){
+        document.write('Nama Mahasiswa: '+ this.nama +
+        '<br/>Mata Kuliah: ' + this.matkul +
+        '<br/>Nilai: ' + this.nilai +
+        '<br/>Keterangan: ' + this.getKelulusan() +
+        '<br/>Grade: ' + this.getGrade() +
+        '<br/>Predikat: ' + this.getPredikat() +
+        '<hr/>');
+    }
+
+    mencetak(){
+        document.write(`Nama Mahasiswa:  ${this.nama}
+        <br/>Mata Kuliah: ${this.matkul}
+        <br/>Nilai: ${this.nilai}
+        <br/>Keterangan: ${this.getKelulusan()}
+        <br/>Grade: ${this.getGrade()}
+        <br/>Predikat: ${this.getPredikat()}
+        <hr/>`);
+    }
+}
+
+//-------membuat object-----
+s1 = new NilaiSiswa('Budi','Matematika Dasar',70);
+s2 = new NilaiSiswa('Siti','Matematika Dasar',50);
+s3 = new NilaiSiswa('Andi','Matematika Dasar',90);
+
+s1.mencetak(); s2.mencetak(); s3.mencetak();
+
+</script>
+   

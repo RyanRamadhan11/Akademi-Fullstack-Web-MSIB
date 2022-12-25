@@ -1,0 +1,38 @@
+
+    <script language="javascript">
+        // Belajar variabel dan type data
+        //deklarasi dan inisialisasi variabel
+        let pelanggan = "Siti Aminah";
+        let produk = "AC";
+        
+        // tv => 3 jt kulkas => 4 jt ac => 5 jt
+
+        //struktur kendali if
+        if(produk == 'TV'){
+            harsat = 3000000;
+        }
+        else if(produk == 'Kulkas'){
+            harsat = 4000000;
+        }
+        else if(produk == 'AC'){
+            harsat = 5000000;
+        }
+        else{
+            harsat = 0;
+        }
+        let jmlbeli = 5;
+        let bruto = harsat * jmlbeli;
+
+        // if(produk == 'AC') diskon = 0.1 * bruto;
+        // else diskon = 0;
+
+        // ternary
+        let diskon = (produk == 'AC') ? 0.1 * bruto : 0;
+        //cetak
+        document.write(" Data Pembelian " +
+        " <br/> Pelanggan : " + pelanggan +
+        " <br/> Produk Pilihan : " + produk +
+        " <br/> Harga Satuan : " + harsat +
+        " <br/> Harga Kotor : " + bruto + 
+        " <br/> Diskon : " + diskon );
+    </script>

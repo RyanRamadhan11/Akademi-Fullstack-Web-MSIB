@@ -1,0 +1,72 @@
+<body bgcolor="Lavender">
+    <form name="formPesan" method="GET" action="#">
+        <table border="0" align="center" cellpadding="15" width="40%">
+            <thead>
+                <tr bgcolor="bisque">
+                    <th colspan="2">Pesan Makanan & Minuman</th>
+                </tr>
+            </thead>
+        
+            <tbody>
+                <tr>
+                    <td width="50%"><label>Nama</label></td>
+                    <td>
+                        <input type="text" name="nama" value="" placeholder="Nama Lengkap"
+                               size="50" maxlength="100"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Email</label></td>
+                    <td>
+                        <input type="text" name="email" value="" placeholder="Alamat Email"
+                               size="50" maxlength="100"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Gender</label></td>
+                    <td>
+                        <input type="radio" name="gender" value="L" checked/>Laki-Laki&nbsp;&nbsp;
+                        <input type="radio" name="gender" value="P"/>Perempuan
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top"><label>Pesanan</label></td>
+                    <td>
+                        <input type="checkbox" name="pesanan" value="Burger"/>Burger<br/>
+                        <input type="checkbox" name="pesanan" value="Fried Chicken"/>Fried Chicken<br/>
+                        <input type="checkbox" name="pesanan" value="Milo Float" checked/>Milo Float<br/>
+                        <input type="checkbox" name="pesanan" value="Frozen Drinks "/>Frozen Drinks <br/>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Jumlah Pesanan</label></td>
+                    <td>
+                        <select name="jumlahPesanan">
+                            <option value="">-- Pilih Jumlah Pesanan --</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top"><label>Silahkan Isi Detail Pesanan</label></td>
+                    <td>
+                        <textarea name="detailpesanan" cols="50" rows="5">Detail Pesanan Anda</textarea>
+                    </td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr bgcolor="bisque">
+                    <th colspan="2">
+                        <input type="submit" name="proses" value="Kirim" />&nbsp;&nbsp;
+                        <input type="reset" name="unproses" value="Batal" />
+                    </th>
+                </tr>
+            </tfoot>
+        </table>
+    </form>
+</body>

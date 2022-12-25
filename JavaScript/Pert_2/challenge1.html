@@ -1,0 +1,24 @@
+<h3 align="center" >Data Mahasiswa</h3>
+<table align="center" cellpadding="10" width="40%">
+    <thead>
+        <tr bgcolor="tomato">
+            <th>No</th>
+            <th>Nama</th>
+            <th>Alamat</th>
+        </tr>
+    </thead>
+    <tbody>
+        <script language="javascript">
+            var no, warna;
+            for(no=1; no <= 100; no++){
+                warna = no % 2 == 0 ? 'yellow' : 'aqua';
+                document.write(`<tr bgcolor = "${warna}">
+                    <td>${no}</td>
+                    <td>Mahasiswa ${no}</td>
+                    <td>Jln Bunga No. ${no}</td>
+                </tr>`);
+            }
+        </script>
+    </tbody>
+</table>
+
